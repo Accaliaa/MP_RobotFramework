@@ -1,0 +1,15 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           Process
+Library           OperatingSystem
+Library           String
+Library           Collections
+Library           Screenshot
+Library           String
+Library           DateTime
+Library           Dialogs
+Library           Screenshot
+Library           OperatingSystem
+Resource    ../Keywords/Avito.Keys.txt
+Resource    ../POM/AvitoPage.txt
+Resource    SetUp.txt
