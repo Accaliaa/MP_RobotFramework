@@ -10,6 +10,13 @@ Library           DateTime
 Library           Dialogs
 Library           Screenshot
 Library           OperatingSystem
-Resource    ../Keywords/Avito.Keys.txt
-Resource    ../POM/AvitoPage.txt
+Resource    ../Keywords/loginKeys.txt
+Resource    ../Keywords/ShippingKeys.txt
+Resource    ../Pom/login.txt
+Resource    ../Pom/shipping.txt
 Resource    SetUp.txt
+
+*** Variables ***
+${Url}      https://practice.automationtesting.in/
+${xpath.myaccount}  //a[contains(text(),'My Account')]
+${navigateur}       chrome

@@ -1,0 +1,11 @@
+*** Variables ***
+${xpath.username}  //input[@name='username']
+${xpath.pwd}  //input[@name='password']
+${xpath.login_button}    //input[@name='login']
+${xpath.login_page}  //a[text()='Sign out']
+${xpath.msg.error}    //Strong[text()='Error']
+${email}  mohamedbadreamine
+${pwd}  BADRE@amine97
+${Wrong.pwd}  BADRE@amine972
+${error}    Error
+

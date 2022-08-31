@@ -1,0 +1,4 @@
+*** Variables ***
+${xpath_edit}    //h3[text() = 'Shipping Address']//following-sibling::a
+${xpath_shipping}    //a[text()='shipping and billing addresses']
+${xpath_title}    //input[@value = 'Save Address']
