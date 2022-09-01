@@ -10,11 +10,9 @@ Library           DateTime
 Library           Dialogs
 Library           Screenshot
 Library           OperatingSystem
-Resource    ../Keywords/loginKeys.txt
-Resource    ../Keywords/ShippingKeys.txt
-Resource    ../Pom/login.txt
-Resource    ../Pom/shipping.txt
-Resource    SetUp.txt
+Resource    ../Pages/login.robot
+Resource    ../Pages/Shipping.robot
+Resource    SetUp.robot
 
 *** Variables ***
 ${Url}      https://practice.automationtesting.in/

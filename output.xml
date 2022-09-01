@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20220831 16:25:03.986" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.18 on win32)">
+<suite source="C:\Users\zdasser\Desktop\MP_robot\MiniProject\TestCases\ShippingAddress.robot" id="s1" name="ShippingAddress">
+<test id="s1-t1" name="Login">
+<kw type="SETUP" name="TestSetUp" library="SetUp">
+<kw name="Log" library="BuiltIn">
+<arg>Start TestSetup</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220831 16:25:04.420" level="INFO">Start TestSetup</msg>
+<status status="PASS" endtime="20220831 16:25:04.420" starttime="20220831 16:25:04.420"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:04.420" starttime="20220831 16:25:04.419"/>
+</kw>
+<kw name="OuvrirUrl" library="loginKeys">
+<arg>${Url}</arg>
+<arg>${navigateur}</arg>
+<doc>ce keyword permet d'ouvrir le site sur le navigateur chrome</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220831 16:25:04.422" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/'.</msg>
+<status status="PASS" endtime="20220831 16:25:14.730" starttime="20220831 16:25:04.421"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20220831 16:25:14.924" starttime="20220831 16:25:14.731"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:14.926" starttime="20220831 16:25:04.421"/>
+</kw>
+<kw name="Click MyAccount" library="loginKeys">
+<arg>${xpath.myaccount}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.myaccount}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:15.004" starttime="20220831 16:25:14.930"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.myaccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:15.006" level="INFO">Clicking element '//a[contains(text(),'My Account')]'.</msg>
+<status status="PASS" endtime="20220831 16:25:16.733" starttime="20220831 16:25:15.004"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:16.734" starttime="20220831 16:25:14.928"/>
+</kw>
+<kw name="Insert email" library="loginKeys">
+<arg>${xpath.username}</arg>
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.email}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:16.814" starttime="20220831 16:25:16.739"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:16.816" level="INFO">Typing text 'mohamedbadreamine' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20220831 16:25:17.422" starttime="20220831 16:25:16.815"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:17.423" starttime="20220831 16:25:16.735"/>
+</kw>
+<kw name="Insert password" library="loginKeys">
+<arg>${xpath.pwd}</arg>
+<arg>${pwd}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.pwd}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:17.480" starttime="20220831 16:25:17.426"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath.pwd}</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:17.482" level="INFO">Typing text 'BADRE@amine97' into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20220831 16:25:17.645" starttime="20220831 16:25:17.481"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:17.646" starttime="20220831 16:25:17.424"/>
+</kw>
+<kw name="Click ButtonLogin" library="loginKeys">
+<arg>${xpath.login_button}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath.Button}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:17.698" starttime="20220831 16:25:17.650"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath.Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:17.699" level="INFO">Clicking element '//input[@name='login']'.</msg>
+<status status="PASS" endtime="20220831 16:25:19.950" starttime="20220831 16:25:17.698"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:19.951" starttime="20220831 16:25:17.648"/>
+</kw>
+<kw name="Click Link" library="ShippingKeys">
+<arg>${xpath_shipping}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_shipping}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:20.006" starttime="20220831 16:25:19.955"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath_shipping}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:20.008" level="INFO">Clicking element '//a[text()='shipping and billing addresses']'.</msg>
+<status status="PASS" endtime="20220831 16:25:24.041" starttime="20220831 16:25:20.006"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:24.042" starttime="20220831 16:25:19.952"/>
+</kw>
+<kw name="Click Edit" library="ShippingKeys">
+<arg>${xpath_edit}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_edit}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 16:25:24.110" starttime="20220831 16:25:24.046"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath_edit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:24.112" level="INFO">Clicking element '//h3[text() = 'Shipping Address']//following-sibling::a'.</msg>
+<status status="PASS" endtime="20220831 16:25:26.506" starttime="20220831 16:25:24.111"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:26.507" starttime="20220831 16:25:24.044"/>
+</kw>
+<kw name="Check title" library="ShippingKeys">
+<arg>${xpath_title}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${msg}</var>
+<arg>${xpath_title}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220831 16:25:26.586" level="INFO">${msg} = First Name *</msg>
+<status status="PASS" endtime="20220831 16:25:26.587" starttime="20220831 16:25:26.512"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>First Name *</arg>
+<arg>${msg}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" endtime="20220831 16:25:26.588" starttime="20220831 16:25:26.587"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:26.589" starttime="20220831 16:25:26.510"/>
+</kw>
+<kw type="TEARDOWN" name="TestTearDown" library="SetUp">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Close All Browsers</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20220831 16:25:28.988" starttime="20220831 16:25:26.594"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:28.988" starttime="20220831 16:25:26.593"/>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<arg>Capture Page ScreenShot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" endtime="20220831 16:25:28.988" starttime="20220831 16:25:28.988"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220831 16:25:28.989" starttime="20220831 16:25:28.988"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:28.989" starttime="20220831 16:25:26.592"/>
+</kw>
+<status status="PASS" endtime="20220831 16:25:28.991" starttime="20220831 16:25:04.418"/>
+</test>
+<status status="PASS" endtime="20220831 16:25:28.996" starttime="20220831 16:25:03.989"/>
+</suite>
+<statistics>
+<total>
+<stat fail="0" skip="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" skip="0" id="s1" name="ShippingAddress" pass="1">ShippingAddress</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

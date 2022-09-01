@@ -1,9 +1,11 @@
+*** Settings ***
+Resource    ../Conf/Resources.robot
 *** Keywords ***
 
+
 TestSetUp
-    Log   Start TestSetup
+    OuvrirUrl  ${Url}   ${navigateur}
 
 TestTearDown
-    Run Keyword And Ignore Error    Close All Browsers
     Run Keyword If Test Failed  Capture Page ScreenShot
     Close Browser
