@@ -12,6 +12,8 @@ Library           Screenshot
 Library           OperatingSystem
 Resource    ../Pages/login.robot
 Resource    ../Pages/Shipping.robot
+Resource    ../Pages/PannierPage.robot
+Resource    ../Pages/logo.robot
 Resource    SetUp.robot
 
 *** Variables ***

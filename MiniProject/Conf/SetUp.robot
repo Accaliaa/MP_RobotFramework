@@ -2,7 +2,6 @@
 Resource    ../Conf/Resources.robot
 *** Keywords ***
 
-
 TestSetUp
     OuvrirUrl  ${Url}   ${navigateur}
 
